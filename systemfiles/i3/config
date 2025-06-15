@@ -28,6 +28,9 @@ exec --no-startup-id /usr/libexec/gvfsd
 exec --no-startup-id /usr/libexec/gvfsd-fuse /run/user/$(id -u)/gvfs
 exec --no-startup-id rclone mount gdrive: /home/dm/gdrive --daemon --vfs-cache-mode writes
 exec --no-startup-id sxhkd
+#(dm) Launch AutoKey headless, system-wide
+exec --no-startup-id autokey-gtk --daemon
+
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
